@@ -26,10 +26,25 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get('/', function(req, res)
+{
+	res.status(200);
+	if (req.session.userDetails) 
 	{
-		res.status(200);
+		res.sendFile(path.join(__dirname,'/public/postLogin/dashboard.html'));
+	}
+	else
+	{
 		res.sendFile(path.join(__dirname,'/public/index.html'));
-	});
+	}
+});
+
+app.get('/dashboard', loginModule.checkSession, function(req, res)
+{
+	res.status(200);
+	res.sendFile(path.join(__dirname,'/public/postLogin/dashboard.html'));
+});
+
+app.post('/login', loginModule.login);
 
 
 server = app.listen(7000, function(){
