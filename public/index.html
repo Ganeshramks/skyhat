@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SkyHat</title>
+	<!--<meta name="viewport" content="initial-sacle=1">-->
+	<link rel="stylesheet" href="/libs/angular-material/angular-material.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="/libs/angular/angular.min.js"></script>
+	<script src="/libs/angular-route/angular-route.min.js"></script>
+    <script src="/libs/angular-animate/angular-animate.min.js"></script>
+    <script src="/libs/angular-aria/angular-aria.min.js"></script>
+	<script src="/libs/angular-material/angular-material.min.js"></script>
+    <script src="/libs/angular-messages/angular-messages.min.js"></script>
+
+    <script src="/assets/js/index.js"></script>
+</head>
+<body ng-app="skyhat" ng-controller="indexCtrl">
+	OM SAI RAM
+	<div layout layout-align="center">
+		<div flex="85" layout layout-align="center">
+			<div flex="25">
+				<md-card class="md-padding" flex>
+					<md-card-content flex layout="column">
+						<md-input-container>
+							<label>Username</label>
+							<input type="text" ng-model="user.un">
+						</md-input-container>
+						<md-input-container>
+							<label>Password</label>
+							<input type="password" ng-model="user.ps">
+						</md-input-container>
+					</md-card-content>
+					<md-card-actions flex layout layout-align="end">
+						<md-button class="md-capitalise">Log In</md-button>
+					</md-card-actions>
+				</md-card>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
