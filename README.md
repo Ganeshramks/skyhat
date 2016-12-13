@@ -1,2 +1,2 @@
 # skyhat
-A simple inventory management app for wholesale dealers.
+An inventory management app for wholesale dealers.
